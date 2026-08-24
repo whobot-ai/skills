@@ -8,7 +8,7 @@ Cursor、Cline 等 17+ 种 Agent 工具。
 
 | Skill | 说明 | 安装 |
 |---|---|---|
-| _即将上线_ | | |
+| [clean-commits](skills/clean-commits) | 生成干净、跟随仓库既有风格的 commit message，零 AI 水印 | `npx skills add whobot-ai/skills@clean-commits -g -y` |
 
 ## 安装方式
 
@@ -16,6 +16,13 @@ Cursor、Cline 等 17+ 种 Agent 工具。
 
 ```bash
 npx skills add whobot-ai/skills@<skill-name> -g -y
+```
+
+**Claude Code（插件市场）：**
+
+```
+/plugin marketplace add whobot-ai/skills
+/plugin install whobot-skills@whobot-skills
 ```
 
 **Claude Code 手动安装：**

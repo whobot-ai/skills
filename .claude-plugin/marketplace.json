@@ -1,0 +1,21 @@
+{
+  "name": "whobot-skills",
+  "owner": {
+    "name": "WhoBot AI"
+  },
+  "metadata": {
+    "description": "WhoBot AI 官方 Agent Skills | Official agent skills by WhoBot AI",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "whobot-skills",
+      "description": "WhoBot AI skill 合集：纯文本、自包含的 Agent Skills",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/clean-commits"
+      ]
+    }
+  ]
+}

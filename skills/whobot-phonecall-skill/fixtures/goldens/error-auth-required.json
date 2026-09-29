@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "error": {
+    "code": "AUTH_REQUIRED",
+    "message": "需要登录",
+    "retryable": false,
+    "nextAction": "login"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

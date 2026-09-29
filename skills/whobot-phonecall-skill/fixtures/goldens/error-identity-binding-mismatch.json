@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "IDENTITY_BINDING_MISMATCH",
+    "message": "当前 Installation 属于其他账号",
+    "retryable": false
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

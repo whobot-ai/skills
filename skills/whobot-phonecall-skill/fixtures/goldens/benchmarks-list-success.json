@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "data": {
+    "items": [
+      {
+        "id": "123",
+        "name": "售前顾问",
+        "callType": "outbound",
+        "industry": {"id": "1", "name": "教育"},
+        "scene": {"id": "2", "name": "招生"}
+      }
+    ],
+    "page": 1,
+    "pageSize": 20,
+    "total": 1
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

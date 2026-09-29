@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "error": {
+    "code": "WEB_CALL_LAUNCH_EXPIRED",
+    "message": "启动票据无效或已过期",
+    "retryable": false,
+    "nextAction": "confirm_replace"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

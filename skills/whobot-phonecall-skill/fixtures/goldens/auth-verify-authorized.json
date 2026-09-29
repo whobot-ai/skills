@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "data": {
+    "status": "authorized",
+    "expiresAt": "2026-09-02T00:00:00Z",
+    "userId": "1001",
+    "corpId": "2002",
+    "phoneMasked": "138****0000"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "error": {
+    "code": "INSUFFICIENT_SCOPE",
+    "message": "需要重新授权网页通话",
+    "retryable": false,
+    "nextAction": "login"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

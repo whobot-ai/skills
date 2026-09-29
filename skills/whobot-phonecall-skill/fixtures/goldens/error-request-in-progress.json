@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "REQUEST_IN_PROGRESS",
+    "message": "请求进行中",
+    "retryable": true
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

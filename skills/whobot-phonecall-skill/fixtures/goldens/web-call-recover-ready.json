@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "data": {
+    "status": "ready",
+    "launchUrl": "https://public.example.test/web-call#launch=opaque-ticket",
+    "expiresAt": "2026-09-04T22:00:00+08:00",
+    "callRef": "callref-opaque-fixture-01",
+    "nextAction": "wait"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

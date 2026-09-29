@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "NOT_IN_CATALOG_EXAMPLE",
+    "message": "不要根据中文推断",
+    "retryable": true
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

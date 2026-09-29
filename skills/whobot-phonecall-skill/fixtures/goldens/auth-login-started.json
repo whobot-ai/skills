@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "data": {
+    "verificationId": "dvs_0123456789abcdef0123456789abcdef",
+    "expiresIn": 300,
+    "device_code": "device-code-marker-16xx",
+    "user_code": "WD-ABCD",
+    "verification_uri": "https://open-cli.ai.hubote.cn/device",
+    "interval": 5
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

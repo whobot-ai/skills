@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "UPSTREAM_RESULT_UNKNOWN",
+    "message": "上游结果未知",
+    "retryable": false
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "TENANT_CONTEXT_CHANGED",
+    "message": "企业上下文已变化",
+    "retryable": false
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "UPSTREAM_UNAVAILABLE",
+    "message": "上游不可用",
+    "retryable": true
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

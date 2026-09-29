@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "data": {
+    "status": "completed",
+    "answered": true,
+    "durationSeconds": 22,
+    "summary": "客户接到电话没有沟通任何内容",
+    "nextAction": "none"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

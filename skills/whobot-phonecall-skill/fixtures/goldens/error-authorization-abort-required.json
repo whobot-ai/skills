@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "AUTHORIZATION_ABORT_REQUIRED",
+    "message": "撤销或 abort 结果未知，不能假定未保存 Token 可用于 logout",
+    "retryable": false
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

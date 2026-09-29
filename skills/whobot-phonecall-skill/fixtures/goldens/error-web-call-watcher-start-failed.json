@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "WEB_CALL_WATCHER_START_FAILED",
+    "message": "本地通话监听未能就绪",
+    "retryable": false
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

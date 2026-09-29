@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "error": {
+    "code": "WEB_CALL_NOT_ACTIVE",
+    "message": "没有当前网页通话",
+    "retryable": false,
+    "nextAction": "start"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

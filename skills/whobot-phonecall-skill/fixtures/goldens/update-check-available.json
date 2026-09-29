@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "data": {
+    "currentVersion": "0.2.1",
+    "recommendedVersion": "0.2.2",
+    "source": "https://registry.npmjs.org/@whobot%2fcli#latest",
+    "updateAvailable": true,
+    "checkedAt": "2026-09-10T00:00:00Z"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "0.2.1",
+    "apiVersion": "v1",
+    "protocolVersion": 1,
+    "notice": {
+      "kind": "update",
+      "currentVersion": "0.2.1",
+      "recommendedVersion": "0.2.2"
+    }
+  }
+}

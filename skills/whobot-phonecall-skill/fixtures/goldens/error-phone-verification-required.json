@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "error": {
+    "code": "PHONE_VERIFICATION_REQUIRED",
+    "message": "需要手机号验证",
+    "retryable": false
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

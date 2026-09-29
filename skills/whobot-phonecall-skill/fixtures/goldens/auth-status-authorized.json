@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "data": {
+    "authorized": true,
+    "installationId": "ins_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installationStatus": "bound",
+    "grantId": "grant_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "phoneMasked": "138****0000",
+    "corpId": "2002",
+    "corpName": "示例企业",
+    "expiresAt": "2026-09-02T00:00:00Z"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

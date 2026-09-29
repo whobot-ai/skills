@@ -1,0 +1,29 @@
+{
+  "id": "web-unknown-hand-back",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "confirmBeforeCLI": true,
+  "commands": [
+    {
+      "command": "whobot web-call cancel --json",
+      "golden": "error-web-call-unknown-retry-cancel.json",
+      "nextAction": "retry_cancel"
+    },
+    {
+      "command": "whobot web-call recover --json",
+      "golden": "error-web-call-query-retry-recover.json",
+      "nextAction": "retry_recover"
+    }
+  ],
+  "onNextAction": {
+    "retry_cancel": "hand-back-control",
+    "retry_recover": "hand-back-control"
+  },
+  "autoLoop": false,
+  "forbiddenCommands": [
+    "whobot web-call start",
+    "whobot web-call start <id> --replace --open=system --json",
+    "whobot web-call status"
+  ],
+  "notes": "UNKNOWN / 查询失败交回用户控制，不得立即无限循环 cancel 或 recover。"
+}

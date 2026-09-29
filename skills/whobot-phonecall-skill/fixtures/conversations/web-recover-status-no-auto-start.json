@@ -1,0 +1,21 @@
+{
+  "id": "web-recover-status-no-auto-start",
+  "route": "references/webrtc.md",
+  "intent": "inspect-web-call",
+  "confirmBeforeCLI": false,
+  "commands": [
+    {
+      "command": "whobot web-call recover --json",
+      "golden": "web-call-recover-inactive.json",
+      "nextAction": "start"
+    }
+  ],
+  "onNextAction": {
+    "start": "do-not-auto-create"
+  },
+  "forbiddenCommands": [
+    "whobot web-call start <id> --open=system --json",
+    "whobot web-call start <id> --replace --open=system --json"
+  ],
+  "notes": "单纯查状态得到 nextAction=start 时不要自动创建；只有用户原意图已授权新建才 start。"
+}

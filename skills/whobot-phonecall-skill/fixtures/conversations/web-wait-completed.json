@@ -1,0 +1,21 @@
+{
+  "id": "web-wait-completed",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "confirmBeforeCLI": true,
+  "commands": [
+    {
+      "command": "whobot web-call wait --timeout 20s --json",
+      "golden": "web-call-wait-completed.json",
+      "nextAction": "none"
+    }
+  ],
+  "forbiddenCommands": [
+    "whobot web-call status"
+  ],
+  "summaryPolicy": "display-only",
+  "onCompleted": "display-or-summarize",
+  "onNextAction": {
+    "none": "stop"
+  }
+}

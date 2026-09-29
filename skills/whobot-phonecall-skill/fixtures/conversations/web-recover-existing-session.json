@@ -1,0 +1,31 @@
+{
+  "id": "web-recover-existing-session",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "userChoice": "网页语音通话",
+  "confirmBeforeCLI": true,
+  "cliOpens": "none",
+  "commands": [
+    {
+      "command": "whobot web-call recover --json",
+      "golden": "web-call-recover-ready.json",
+      "nextAction": "wait"
+    }
+  ],
+  "onNextAction": {
+    "wait": "show-launchUrl-then-wait"
+  },
+  "forbiddenCommands": [
+    "whobot web-call start",
+    "whobot web-call start <id> --replace --open=system --json",
+    "whobot web-call status"
+  ],
+  "forbiddenFields": [
+    "sessionId",
+    "watcherBootstrap",
+    "eventWssUrl",
+    "eventWssToken",
+    "pageControlToken"
+  ],
+  "notes": "已有可恢复会话只复用原入口，不新建第二通。"
+}

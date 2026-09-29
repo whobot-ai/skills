@@ -1,0 +1,20 @@
+{
+  "id": "update-notice-once",
+  "route": "references/installation.md",
+  "intent": "update-cli",
+  "notice": {
+    "kind": "update",
+    "currentVersion": "0.2.1",
+    "recommendedVersion": "0.2.2"
+  },
+  "remindOncePerRecommendedVersion": true,
+  "laterContinuesTask": true,
+  "confirmBeforeApply": true,
+  "commands": [
+    "whobot update apply --json"
+  ],
+  "forbiddenCommands": [
+    "whobot update apply --channel",
+    "present_files"
+  ]
+}

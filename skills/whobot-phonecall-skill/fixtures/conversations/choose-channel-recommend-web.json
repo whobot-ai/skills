@@ -1,0 +1,14 @@
+{
+  "id": "choose-channel-recommend-web",
+  "route": "references/webrtc.md",
+  "intent": "experience-benchmark",
+  "ask": ["网页语音通话", "实际电话"],
+  "recommend": "网页语音通话",
+  "confirmBeforeCLI": true,
+  "commands": [],
+  "forbiddenCommands": [
+    "whobot web-call start",
+    "whobot trials start <id> --json",
+    "whobot auth status --json"
+  ]
+}

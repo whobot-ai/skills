@@ -1,0 +1,27 @@
+{
+  "id": "choose-pstn-existing-trials",
+  "route": "references/trial-calls.md",
+  "intent": "experience-benchmark",
+  "ask": ["网页语音通话", "实际电话"],
+  "recommend": "网页语音通话",
+  "userChoice": "实际电话",
+  "confirmBeforeCLI": true,
+  "commands": [
+    {
+      "command": "whobot trials start <id> --json",
+      "golden": "trials-start-account-phone-accepted.json"
+    },
+    {
+      "command": "whobot trials start <id> --phone <phone> --json",
+      "golden": "trials-start-verification-required.json"
+    },
+    {
+      "command": "stdin | whobot trials verify <verificationId> --code-stdin --json",
+      "golden": "trials-verify-accepted.json"
+    }
+  ],
+  "forbiddenCommands": [
+    "whobot web-call start",
+    "whobot web-call status"
+  ]
+}

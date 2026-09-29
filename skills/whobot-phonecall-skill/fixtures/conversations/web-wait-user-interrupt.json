@@ -1,0 +1,25 @@
+{
+  "id": "web-wait-user-interrupt",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "confirmBeforeCLI": true,
+  "commands": [
+    {
+      "command": "whobot web-call wait --timeout 20s --json",
+      "golden": "web-call-wait-pending.json",
+      "nextAction": "wait",
+      "interrupted": true
+    }
+  ],
+  "onUserInterrupt": "respond-first",
+  "stopWaitMeansHangup": false,
+  "cancelledToolCall": "not-empty-http",
+  "onNextAction": {
+    "wait": "stop-wait-keep-call"
+  },
+  "forbiddenCommands": [
+    "whobot web-call cancel --json",
+    "whobot web-call status"
+  ],
+  "notes": "用户提问或叫停时先响应；停止等待不等于挂断；被取消或未完成的 wait 不能解释为空 HTTP 响应。"
+}

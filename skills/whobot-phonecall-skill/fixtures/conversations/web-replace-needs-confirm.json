@@ -1,0 +1,38 @@
+{
+  "id": "web-replace-needs-confirm",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "userChoice": "网页语音通话",
+  "confirmBeforeCLI": true,
+  "replaceRequiresExplicitAuth": true,
+  "commands": [
+    {
+      "command": "whobot web-call start <id> --open=system --json",
+      "golden": "error-web-call-already-active.json",
+      "nextAction": "confirm_replace"
+    },
+    {
+      "command": "whobot web-call wait --timeout 20s --json",
+      "golden": "web-call-wait-pending-confirm-replace.json",
+      "nextAction": "confirm_replace"
+    },
+    {
+      "command": "whobot web-call start <id> --replace --open=system --json",
+      "golden": "web-call-start-ready-system.json",
+      "nextAction": "wait",
+      "requires": "explicit-user-replace"
+    }
+  ],
+  "onNextAction": {
+    "confirm_replace": "ask-then-replace-once",
+    "wait": "do-not-treat-all-pending-as-wait"
+  },
+  "alreadyAuthorizedSkipsRepeatAsk": true,
+  "forbiddenCommands": [
+    "whobot web-call status"
+  ],
+  "forbiddenUnlessAuthorized": [
+    "whobot web-call start <id> --replace --open=system --json"
+  ],
+  "notes": "pending 且 nextAction=confirm_replace 不得继续 wait；未授权不得 --replace。"
+}

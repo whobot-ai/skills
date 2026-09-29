@@ -1,0 +1,24 @@
+{
+  "id": "web-wait-watcher-lost",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "confirmBeforeCLI": true,
+  "commands": [
+    {
+      "command": "whobot web-call wait --timeout 20s --json",
+      "golden": "error-web-call-watcher-lost.json",
+      "nextAction": "confirm_replace"
+    }
+  ],
+  "forbiddenCommands": [
+    "whobot web-call start",
+    "whobot web-call status"
+  ],
+  "nextOnError": {
+    "WEB_CALL_WATCHER_LOST": "stop-unrecoverable"
+  },
+  "onWatcherLost": "stop-unrecoverable",
+  "onNextAction": {
+    "confirm_replace": "ask-replace-do-not-auto-redial"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "web-wait-pending-loop",
+  "route": "references/webrtc.md",
+  "intent": "experience-web-call",
+  "confirmBeforeCLI": true,
+  "commands": [
+    {
+      "command": "whobot web-call wait --timeout 20s --json",
+      "golden": "web-call-wait-pending.json",
+      "nextAction": "wait"
+    }
+  ],
+  "forbiddenCommands": [
+    "whobot web-call status",
+    "whobot web-call start"
+  ],
+  "onPending": "repeat-wait-if-nextAction-wait",
+  "onNextAction": {
+    "wait": "repeat-wait"
+  }
+}

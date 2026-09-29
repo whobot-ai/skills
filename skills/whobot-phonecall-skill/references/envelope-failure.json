@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "error": {
+    "code": "VERIFICATION_REJECTED",
+    "message": "验证码错误",
+    "retryable": false,
+    "field": "phone"
+  },
+  "meta": {
+    "requestId": "req_0123456789abcdef0123456789abcdef",
+    "cliVersion": "1.0.0",
+    "apiVersion": "v1",
+    "protocolVersion": 1
+  }
+}

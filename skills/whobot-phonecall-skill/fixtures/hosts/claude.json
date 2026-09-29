@@ -1,0 +1,53 @@
+{
+  "host": "Claude",
+  "role": "compatibility",
+  "liveE2E": false,
+  "protocolVersion": 1,
+  "protocolGoldens": [
+    "protocol-missing.json",
+    "protocol-string.json",
+    "protocol-unsupported-major.json"
+  ],
+  "successGoldens": [
+    "auth-login-started.json",
+    "auth-status-authorized.json",
+    "auth-verify-authorized.json",
+    "trials-start-account-phone-accepted.json",
+    "trials-start-verification-required.json",
+    "trials-verify-accepted.json",
+    "web-call-start-ready-none.json",
+    "web-call-start-ready-system.json",
+    "web-call-open-system.json",
+    "web-call-wait-pending.json",
+    "web-call-wait-completed.json"
+  ],
+  "errorCodes": [
+    "AUTH_REQUIRED",
+    "AUTHORIZATION_ABORT_REQUIRED",
+    "CREDENTIAL_ORIGIN_MISMATCH",
+    "CREDENTIAL_RECOVERY_REQUIRED",
+    "CREDENTIAL_WRITE_FAILED",
+    "IDEMPOTENCY_CONFLICT",
+    "IDENTITY_BINDING_MISMATCH",
+    "INSTALLATION_REQUIRED",
+    "INSUFFICIENT_SCOPE",
+    "INTERNAL",
+    "INVALID_ARGUMENT",
+    "PERMISSION_DENIED",
+    "PHONE_VERIFICATION_REQUIRED",
+    "RATE_LIMITED",
+    "REAUTHENTICATION_REQUIRED",
+    "REQUEST_IN_PROGRESS",
+    "TENANT_CONTEXT_CHANGED",
+    "UPSTREAM_ERROR",
+    "UPSTREAM_RESULT_UNKNOWN",
+    "UPSTREAM_UNAVAILABLE",
+    "VERIFICATION_EXPIRED",
+    "VERIFICATION_REJECTED",
+    "WEB_CALL_ALREADY_ACTIVE",
+    "WEB_CALL_WATCHER_START_FAILED",
+    "WEB_CALL_LAUNCH_EXPIRED",
+    "WEB_CALL_NOT_ACTIVE",
+    "WEB_CALL_WATCHER_LOST"
+  ]
+}

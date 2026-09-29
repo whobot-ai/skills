@@ -5,16 +5,17 @@
   },
   "metadata": {
     "description": "WhoBot AI 官方 Agent Skills | Official agent skills by WhoBot AI",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "plugins": [
     {
       "name": "whobot-skills",
-      "description": "WhoBot AI skill 合集：纯文本、自包含的 Agent Skills",
+      "description": "WhoBot AI skill 合集：开发协作、AI 电话数字员工等 Agent Skills",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/clean-commits"
+        "./skills/clean-commits",
+        "./skills/whobot-phonecall-skill"
       ]
     }
   ]

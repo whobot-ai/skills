@@ -65,3 +65,17 @@ ClawHub 发布使用纯文本 skill 目录，不上传旧 MCP 文件、ZIP、`.D
 
 最新版内容来源：`~/Downloads/whobot-phonecall-skill-261027.zip`。
 对应代码提交：合集 `1d1fb15`，专用仓库 `32878cd`；文件内版本为 2.0.0，CLI 协议为 2。
+
+## ClawHub 发布记录：2026-10-27
+
+已使用 `whobot-ai` 登录身份分别提交个人版和组织版 `2.0.1`，不迁移所有权。
+源代码为 `whobot-ai/skills@1d1fb15bf29d4b150843e7e4681cbc45eb843ac2` 的 `skills/whobot-phonecall-skill`。
+两份上传均含 11 个文件，内容指纹均为 `b3c878d192341ed595c618c2ca431ceb1e786a057f1fa9cfe34344cded5bf0d2`。
+文件内 Skill 版本仍为 2.0.0；ClawHub 的发布版本为 2.0.1。
+
+| 发布者 | 版本 ID | 提交状态 |
+| --- | --- | --- |
+| whobot-ai | k977rtpgfxfn4e4x97883b69xx8h20vr | pending-publication，等待平台检查 |
+| whobot | k97bkw95dmrymt8hx7hkwd3ba58h25cm | pending-publication，等待平台检查 |
+
+提交成功不代表公开上线；以 `clawhub inspect @<owner>/whobot-phonecall-skill --json` 的最新版本和平台审核状态为准。

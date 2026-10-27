@@ -18,23 +18,24 @@ ClawHub CLI 已登录 @whobot-ai。保留本机 gh 多账号配置；操作时�
 
 3. **提交推送**：
    ```bash
-   git add -A && git commit -m "新增 skill: <显示名>" && git push
+   git add <本次修改的文件> && git commit -m "新增 skill: <显示名>" && git push
    ```
    推送后 GitHub 渠道即刻生效：`npx skills add whobot-ai/skills@<skill-slug> -g -y`
 
 4. **发布到 ClawHub**：
    ```bash
    clawhub skill publish ./skills/<skill-slug> \
-     --slug <skill-slug> --name "<显示名>" \
+     --owner <发布者> --slug <skill-slug> --name "<显示名>" \
      --topics "逗号,分隔,最多5个" \
      --source-repo whobot-ai/skills --source-commit $(git rev-parse HEAD)
    ```
-   首次发布自动 1.0.0，之后自动递增；提交后等自动安全扫描（纯文本一般几分钟通过），
-   `clawhub inspect <skill-slug>` 查看状态。
+   发布前查询已有版本与本手册的 pending 记录，显式选择未占用的版本号。
+   提交后检查 `clawhub inspect @<发布者>/<skill-slug> --json`；等待时间由平台决定，
+   不把提交回执、基础检查通过或旧版 latest 误当作新版已上线。
 
 ## 更新已有 skill
 
-改文件 → commit + push → 重跑第 4 步的 publish 命令（带新 commit sha）即可。
+电话 skill 按下方“长期更新约定”执行；其他 skill 按用户指定的仓库和发布范围更新。
 
 ## 红线
 
@@ -92,3 +93,17 @@ npx --yes clawhub@latest scan download @whobot/whobot-phonecall-skill --version 
 已核查：两份 manifest 均列出 2.0.1、11 个文件及各自名称；基础静态检查为 clean，ClawScan 等其他扫描结果为空。
 报告汇总中的 `status: succeeded` 不能当作已公开上线的证明。核查时公开 latest 仍分别为 1.0.0 / 2.0.0。
 尚未验证普通发布者后台存在单独的“提交记录”页面，不应向使用者承诺该入口。
+
+## 长期更新约定
+
+用户要求“按之前流程更新发布”时，一次完成输入校验、双仓库同步、安装包重建、提交推送、ClawHub 双发布与证据交付。仅要求同步 GitHub 或查询时不扩大范围。
+
+1. 以用户指定新版文件为准；安全解压，过滤 macOS 元数据。多个候选不擅自选取。
+2. 同步纯 skill 到合集子目录和专用仓库根目录，保留专用仓库的独立 MCP、旧知识库和仓库文档；删除上游已移除的镜像文件时，依据旧清单，不清空仓库根目录。
+3. 重建 `.skill` 包并比对完整文件集合与内容；检查本地引用、JSON、版本和安装说明。文件内版本和 CLI 协议按源码保留，ClawHub 发布版本单独管理。
+4. 保留 gh 多账号配置，显式使用 whobot-ai；提交范围仅包含本次改动。GitHub 和 ClawHub 分别验证登录与权限，已有授权可用时不重复索要确认。
+5. 检查两个 owner 的原条目以及 pending 记录，先 dry-run，再发布到 whobot-ai 和 whobot；保存真实 JSON 回执。未知结果先查询，不重复上传，不不断增加版本号规避等待。
+6. 查询两个 owner 的新版状态，并下载各自官方报告。pending 可合理间隔等待约 5 分钟；仍未上线则如实交付已提交、尚未上线及证据，不承诺后台持续监控。
+7. 回执、官方 ZIP 和可读 manifest 保存在本机下载目录。更新本手册的发布记录并推送；最终直接提供版本、原条目链接、GitHub 提交及回执/报告链接，不让用户另找未经验证的后台入口。
+
+登录授权确实失效时才请用户介入。CLI 设备登录进程必须保持等待；用户完成网页授权后验证本机 whoami，避免将网页已授权误认为本机已登录。浏览器当前账号与 gh / ClawHub CLI 账号可能不同。

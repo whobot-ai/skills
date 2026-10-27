@@ -107,3 +107,19 @@ npx --yes clawhub@latest scan download @whobot/whobot-phonecall-skill --version 
 7. 回执、官方 ZIP 和可读 manifest 保存在本机下载目录。更新本手册的发布记录并推送；最终直接提供版本、原条目链接、GitHub 提交及回执/报告链接，不让用户另找未经验证的后台入口。
 
 登录授权确实失效时才请用户介入。CLI 设备登录进程必须保持等待；用户完成网页授权后验证本机 whoami，避免将网页已授权误认为本机已登录。浏览器当前账号与 gh / ClawHub CLI 账号可能不同。
+
+## skills.sh 渠道（纳入长期更新流程）
+
+原条目：https://www.skills.sh/whobot-ai/skills/whobot-phonecall-skill 。
+官方说明：https://www.skills.sh/docs/faq 、https://www.skills.sh/docs/cli 。
+该渠道以 GitHub 为源码，通过官方 CLI 安装遥测收录，不使用 ClawHub 的发布版本与审核流程。
+
+GitHub 更新后，在临时项目目录做一次真实安装验证，避免覆盖用户全局环境：
+
+```bash
+npx --yes skills@latest add https://github.com/whobot-ai/skills --skill whobot-phonecall-skill --agent codex --copy --yes --json
+```
+
+比对安装文件的完整集合及字节内容，然后检查 skills.sh 原页面是否出现新版特征。不要重复安装刷统计或编造强制刷新接口。安装已最新和页面已刷新必须分别报告。
+
+2026-10-27 核查：官方 CLI 安装成功，11 个文件与最新版逐字节一致；返回 hash 为 `89014355f52fd35ae18305a1c16a98b66ce919898dcfab5b4caaaabc0a626545`。安装后首次检查页面仍显示旧内容，未出现新版“关于呼波特”及品牌入口；不据此宣称页面已刷新。

@@ -79,3 +79,16 @@ ClawHub 发布使用纯文本 skill 目录，不上传旧 MCP 文件、ZIP、`.D
 | whobot | k97bkw95dmrymt8hx7hkwd3ba58h25cm | pending-publication，等待平台检查 |
 
 提交成功不代表公开上线；以 `clawhub inspect @<owner>/whobot-phonecall-skill --json` 的最新版本和平台审核状态为准。
+
+### 提交后的核查
+
+可使用官方 CLI 下载两份 2.0.1 的服务器检查报告：
+
+```bash
+npx --yes clawhub@latest scan download @whobot-ai/whobot-phonecall-skill --version 2.0.1
+npx --yes clawhub@latest scan download @whobot/whobot-phonecall-skill --version 2.0.1
+```
+
+已核查：两份 manifest 均列出 2.0.1、11 个文件及各自名称；基础静态检查为 clean，ClawScan 等其他扫描结果为空。
+报告汇总中的 `status: succeeded` 不能当作已公开上线的证明。核查时公开 latest 仍分别为 1.0.0 / 2.0.0。
+尚未验证普通发布者后台存在单独的“提交记录”页面，不应向使用者承诺该入口。

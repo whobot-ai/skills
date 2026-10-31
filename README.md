@@ -25,6 +25,14 @@ Cursor、Cline 等 Agent 工具。部分 skill 会调用官方 CLI，运行要�
 
 ## 安装方式
 
+**一句话安装（推荐）**：把这句话发给你的 AI Agent（WorkBuddy、Claude Code、Codex、OpenClaw、Cursor 等）：
+
+```text
+请帮我安装呼波特的电话 Skill https://github.com/whobot-com/openclaw-whobot-skill
+```
+
+电话 Skill 完整文档（各平台接入、使用指南）：<https://whobot-com.github.io/openclaw-whobot-skill/>
+
 **通用（推荐）：**
 
 ```bash
@@ -48,6 +56,12 @@ git clone https://github.com/whobot-ai/skills && cp -r skills/skills/<skill-name
 
 ```bash
 clawhub install <skill-name>
+```
+
+**ModelScope 魔搭：**
+
+```bash
+npx skills add https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill
 ```
 
 **WorkBuddy：** 直接对它说「帮我安装 whobot-ai/skills@<skill-name>」，

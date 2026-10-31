@@ -57,6 +57,9 @@ ClawHub CLI 已登录 @whobot-ai。保留本机 gh 多账号配置；操作时�
 | ClawHub 电话 skill 个人版 | https://clawhub.ai/whobot-ai/whobot-phonecall-skill |
 | ClawHub 电话 skill 组织版 | https://clawhub.ai/whobot/whobot-phonecall-skill |
 | ClawHub 旧知识库条目 | https://clawhub.ai/whobot-ai/openclaw-whobot-skill |
+| ModelScope 组织「呼波特」 | https://modelscope.cn/organization/WhoBot （英文名 WhoBot，2026-10-31 审核通过） |
+| ModelScope 电话 skill | https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill |
+| 电话 skill 文档站 | https://whobot-com.github.io/openclaw-whobot-skill/ （源码在专用仓库 docs/） |
 
 GitHub 组织 handle 为 `whobot-com`，ClawHub 组织 handle 为 `whobot`，两者不同。
 个人版与组织版电话 skill 分别维护在原有条目中，发布时不迁移 owner、不新建替代 slug。
@@ -123,3 +126,18 @@ npx --yes skills@latest add https://github.com/whobot-ai/skills --skill whobot-p
 比对安装文件的完整集合及字节内容，然后检查 skills.sh 原页面是否出现新版特征。不要重复安装刷统计或编造强制刷新接口。安装已最新和页面已刷新必须分别报告。
 
 2026-10-27 核查：官方 CLI 安装成功，11 个文件与最新版逐字节一致；返回 hash 为 `89014355f52fd35ae18305a1c16a98b66ce919898dcfab5b4caaaabc0a626545`。安装后首次检查页面仍显示旧内容，未出现新版“关于呼波特”及品牌入口；不据此宣称页面已刷新。
+
+## ModelScope 渠道（2026-10-31 上线）
+
+条目：https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill ，所有者为 ModelScope 组织 `WhoBot`（中文名「呼波特」），由用户个人账号 zephyr 作为组织成员登录操作。
+发布方式：网页「创建 Skills → 从 Github 仓库快速创建」，导入 `https://github.com/whobot-ai/skills` 并只勾选 `skills/whobot-phonecall-skill/SKILL.md`，同步 11 个文件；无需 API Key。
+设置：展示名「呼波特AI电话数字员工」、MIT、类型「市场推广」、公开，标签 电话数字员工 / AI外呼 / 语音客服 / voice-agent / whobot，**自动同步开启**。
+
+更新电话 skill 后：合集仓库推送即触发 ModelScope 自动同步；用公开接口核查，不需要登录：
+
+```bash
+curl -s https://www.modelscope.cn/openapi/v1/skills/WhoBot/whobot-phonecall-skill
+```
+
+详情接口的 id 为 `WhoBot/whobot-phonecall-skill`（不带 `@`）。返回中的 `sync_status` 在上线当天仍为 false，但文件页已有 SKILL.md、release.json、references/；以文件页内容为准，不把 `sync_status` 当作唯一依据。
+ModelScope 显示的安装命令：`npx skills add https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill`。

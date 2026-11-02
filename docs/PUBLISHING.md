@@ -67,8 +67,9 @@ GitHub 组织 handle 为 `whobot-com`，ClawHub 组织 handle 为 `whobot`，两
 ClawHub 发布使用纯文本 skill 目录，不上传旧 MCP 文件、ZIP、`.DS_Store` 或 `__MACOSX`。
 发布前分别检查两个 owner 的已有版本，再选择未占用的新版本号；文件内 Skill 协议版本与 ClawHub 发布版本分别记录。
 
-最新版内容来源：`~/Downloads/whobot-phonecall-skill-261027.zip`。
-对应代码提交：合集 `1d1fb15`，专用仓库 `32878cd`；文件内版本为 2.0.0，CLI 协议为 2。
+2026-10-27 历史版本来源：`~/Downloads/whobot-phonecall-skill-261027.zip`。
+对应代码提交：合集 `1d1fb15`，专用仓库 `32878cd`；当时文件内版本为 2.0.0，CLI 协议为 2。
+当前内容基线为合集 `5f6f70a46aeacdaaf1ee759ca2dcbcaf8c004339` 中的电话 skill：文件内版本 2.0.4、CLI 协议 2、12 个纯文本文件；各渠道实际发布状态见下方 2.0.4 记录。
 
 ## ClawHub 发布记录：2026-10-27
 
@@ -141,3 +142,23 @@ curl -s https://www.modelscope.cn/openapi/v1/skills/WhoBot/whobot-phonecall-skil
 
 详情接口的 id 为 `WhoBot/whobot-phonecall-skill`（不带 `@`）。返回中的 `sync_status` 在上线当天仍为 false，但文件页已有 SKILL.md、release.json、references/；以文件页内容为准，不把 `sync_status` 当作唯一依据。
 ModelScope 显示的安装命令：`npx skills add https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill`。
+
+## 2.0.4 全渠道同步记录（2026-11-02 UTC）
+
+内容基线：`whobot-ai/skills@5f6f70a46aeacdaaf1ee759ca2dcbcaf8c004339`，skill tree `c40fbf13f08a0995e44e11c3a38711d47e15308a`。本版新增 `references/company.md`，更新账号、员工创建、标杆查找、试打、安装和协议说明。
+
+| 渠道 | 已验证状态 |
+| --- | --- |
+| GitHub 合集 | 2.0.4 内容已在上述源提交中公开。 |
+| GitHub 专用仓库 | 已推送 [`c53437e`](https://github.com/whobot-com/openclaw-whobot-skill/commit/c53437e49e345094466c865d7df19ec6535a68c2)；12 个 skill 文件与合集逐字节一致，保留独立 MCP、旧知识库和其他仓库文件。 |
+| `.skill` 安装包 | 已重建并推送；压缩包文件集合及内容与 12 个源文件完全一致，SHA256 `211e46ef3e43f5aa0c4d7345571cdb93610991bdbec436a82ee9fa3e60b4a5de`。 |
+| 文档站 | docs-check 和 Pages 部署成功；公开 `llms-full.txt` 与新生成文件逐字节一致。 |
+| skills.sh | 官方 CLI 1.7.4 在隔离项目中完成一次真实安装，12 文件逐字节一致；原页面已显示 `whobot status --skill 2.0.4` 和新版网页通话升级恢复说明。 |
+| SkillHub 官方条目 | [`@org-teo38e1k/whobot-phonecall-skill`](https://skillhub.cn/skills/org-teo38e1k/whobot-phonecall-skill) 已公开为 2.0.4，发布者为北京呼波特人工智能科技有限公司；CLI 安装后全部 references、release.json 和正文与源文件一致。仅 `description_zh` 少一行“仅需网站文字客服、聊天机器人或纯语音合成时不适用”，另附平台 `_meta.json`；未重复提交同版本。 |
+| ClawHub 个人 / 组织 | 双 dry-run 通过，但上传入口持续返回 HTTP 400 / `Too many writes in a short period of time`；2.0.4 **尚未提交、未进入 pending**。最终查询两个原条目 latest 仍为 2.0.1，2.0.4 版本查询和官方报告下载均返回 `Skill version not found`。 |
+| GitCode | 原仓库确认为 [`whobot/openclaw-whobot-skill`](https://gitcode.com/whobot/openclaw-whobot-skill)，当前 `main` 为 `07c69156a2e5bd8a067d5dac9a309eca8149f76a`、内容 2.0.0。已准备与专用 GitHub 仓库一致的 20 个变更文件；本次 CLI 无凭据，非交互 Git dry-run 也未取得凭据，尚未推送。 |
+| ModelScope | 自动同步已启用，但本次核查页面内容仍为 2.0.0，最近同步显示 `2026-11-01 10:06:38`。已打开网页手动同步确认流程，尚未完成确认或验证新版；不得据此记为上线。 |
+
+本次本地证据目录：`~/Downloads/whobot-release-2.0.4-20261101/`。包含安装包、skills.sh 安装回执与页面快照、SkillHub 逐文件比对、ClawHub dry-run/失败回执及脱敏 HTTP 诊断。ClawHub 错误发生在首个文件申请 upload URL 时，尚未上传文件或调用发布 POST；按返回 reset 等待后仍失败，已停止重复写入，没有可交付的新版本扫描 ZIP。
+
+GitCode 尚未登录或浏览器发布未完成时，不把本地准备完成当作已同步。后续继续原仓库、原条目和版本 2.0.4；先查远端与 pending 状态，再恢复发布，不创建替代 slug 或递增版本号规避平台故障。

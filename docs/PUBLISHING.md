@@ -59,7 +59,8 @@ ClawHub CLI 已登录 @whobot-ai。保留本机 gh 多账号配置；操作时�
 | ClawHub 旧知识库条目 | https://clawhub.ai/whobot-ai/openclaw-whobot-skill |
 | ModelScope 组织「呼波特」 | https://modelscope.cn/organization/WhoBot （英文名 WhoBot，2026-10-31 审核通过） |
 | ModelScope 电话 skill | https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill |
-| 电话 skill 文档站 | https://whobot-com.github.io/openclaw-whobot-skill/ （源码在专用仓库 docs/） |
+| 电话 skill 文档站 | https://www.whobot.com/skills/docs/ （官网版，源码在专用仓库 docs/） |
+| 电话 skill 文档站 GitHub 版 | https://whobot-com.github.io/openclaw-whobot-skill/ （同一份源码，canonical 指向官网） |
 
 GitHub 组织 handle 为 `whobot-com`，ClawHub 组织 handle 为 `whobot`，两者不同。
 个人版与组织版电话 skill 分别维护在原有条目中，发布时不迁移 owner、不新建替代 slug。

@@ -69,7 +69,7 @@ ClawHub 发布使用纯文本 skill 目录，不上传旧 MCP 文件、ZIP、`.D
 
 2026-10-27 历史版本来源：`~/Downloads/whobot-phonecall-skill-261027.zip`。
 对应代码提交：合集 `1d1fb15`，专用仓库 `32878cd`；当时文件内版本为 2.0.0，CLI 协议为 2。
-当前内容基线为合集 `d25fe29a285096e4d37aade3e0d09a91c66e6bf0` 中的电话 skill：文件内版本 2.0.5、CLI 协议 2、12 个纯文本文件；2.0.5 已同步到专用仓库（`b8430ca`，含安装包与文档），尚未同步到各发布渠道；最近一次渠道同步状态见下方 2.0.4 记录。
+当前内容基线为合集 `d25fe29a285096e4d37aade3e0d09a91c66e6bf0` 中的电话 skill：文件内版本 2.0.5、CLI 协议 2、12 个纯文本文件；2.0.5 已同步到专用仓库（`b8430ca`，含安装包与文档），已执行各渠道 2.0.5 同步；上线、审核中和受阻事项分别见下方 2.0.5 记录。
 
 ## ClawHub 发布记录：2026-10-27
 
@@ -162,3 +162,29 @@ ModelScope 显示的安装命令：`npx skills add https://modelscope.cn/skills/
 本次本地证据目录：`~/Downloads/whobot-release-2.0.4-20261101/`。包含安装包、skills.sh 安装回执与页面快照、SkillHub 逐文件比对、ClawHub dry-run/失败回执及脱敏 HTTP 诊断。ClawHub 错误发生在首个文件申请 upload URL 时，尚未上传文件或调用发布 POST；按返回 reset 等待后仍失败，已停止重复写入，没有可交付的新版本扫描 ZIP。
 
 GitCode 尚未登录或浏览器发布未完成时，不把本地准备完成当作已同步。后续继续原仓库、原条目和版本 2.0.4；先查远端与 pending 状态，再恢复发布，不创建替代 slug 或递增版本号规避平台故障。
+
+
+## 2.0.5 渠道同步记录（2026-11-05，回执 UTC 2026-11-06）
+
+核对源提交：合集 `d87b0efeebbea0cd00f6b6f574a4bfb369ddd523`、专用仓库 `b8430ca3b760428ff374d5f4272f769542336e82`。两仓 12 个纯 Skill 文件及专用仓库 `.skill` 内容一致，CLI 协议保持 2。本次沿用已有条目、资产和仓库，不迁移 owner 或创建替代 slug。
+
+| 渠道 | 已验证状态 |
+| --- | --- |
+| ClawHub 个人 | [原条目](https://clawhub.ai/whobot-ai/whobot-phonecall-skill) latest 2.0.5，moderation clean；versionId `k97d0vg6fswkpkgth99m8frdys8hq5cm`，attemptId `zx7a3aczsea0g07gwpq0pz6ny98hqpjb`。 |
+| ClawHub 组织 | [原条目](https://clawhub.ai/whobot/whobot-phonecall-skill) latest 2.0.5，moderation clean；versionId `k97dz0pb3ham9pv3dkf8dscsvn8hq7pe`，attemptId `zx782wzke8ew2mwsdg82e3yt7x8hq9sa`。 |
+| skills.sh | [原页面](https://www.skills.sh/whobot-ai/skills/whobot-phonecall-skill) 已显示 2.0.5；隔离目录完成一次真实安装，12 文件逐字节一致。 |
+| ModelScope | [原条目](https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill) 手动同步成功，自动同步继续启用；公开 ZIP 中 12 文件与源文件逐字节一致。 |
+| GitCode | [原仓库](https://gitcode.com/whobot/openclaw-whobot-skill) 提交 `811b1ed5def894c41c6b43c1dfff9e7161654628`，保留原历史及独立 MCP。已发布 [v2.0.5](https://gitcode.com/whobot/openclaw-whobot-skill/releases/v2.0.5)；Git fetch 比对 12 文件及 `.skill` 均一致，发行版附件重新下载也与源包一致。 |
+| WorkBuddy | 原资产 `os_09a8d4e2459431ea` 提交 2.0.5，审核中；最终上传 ZIP 本地 WorkBuddy 预检 PASS。 |
+| SkillHub 个人 | [原条目](https://skillhub.cn/skills/user_fa822256/yzfly-whobot-voice-agent) 提交更新 2.0.5，安全审核中。 |
+| 千问办公 | 原申请更新 2.0.5，安全扫描中。页面沿用原申请时间；历史 2.0.4 自测资料已明确标注，不冒充 2.0.5 运行测评。 |
+| 豆包 | 原能力 `7703563794026335244` 提交 2.0.5，审核中。description 按平台限制缩短，完整正文和参考资料保留；历史自测材料版本已明确标注。 |
+| SkillHub 企业 | [原条目](https://skillhub.cn/skills/org-teo38e1k/whobot-phonecall-skill) 已显示 2.0.5，但安装后 `SKILL.md` 与 `references/create-agent.md` 不同于最新源文件，后者缺少新版草稿恢复指令。当前个人后台不含该企业资产，需所属账号处理；未重复提交同版本或递增版本绕过占用。 |
+| 百度 DuMate | 原平台版本 1.0.0（源内容 2.0.4）仍审核中，更新按钮禁用；已准备 2.0.5 包，尚未上传，未撤回原申请。 |
+
+ClawHub 使用 `whobot-ai` 身份双 dry-run 后分别发布；两份内容指纹均为 `afc25ffe1cee4a4a0e0130e6bab0223e18bd3f729d8f8169be0bed525bdd4505`。两份官方扫描 ZIP 已下载，manifest 均为 2.0.5、12 文件、sourceKind published、status succeeded；ClawScan 均为 clean/benign。平台 verdict 与本地预检分开记录。
+
+`.skill` 与 GitCode 发行版附件 SHA-256：`46bab7474f9cb7a71ea1de1da5ae1439ef9da1e549001f0905e1ca4f05c3671d`。
+WorkBuddy/SkillHub 适配 ZIP：`c95ae28e58a5a1b849515269ebd2ae8064645cf01e7d179af930da7c978f650f`；千问：`8d0efcc423e74cfd9eb78440480337c21f4ab2d673c85de8c8bf5c5acf42e230`；豆包：`67244d3077848af26e2b8723a879746175528d685de6c2139c5c939ceef71c2d`；百度候选：`42f3c1ca7c4071a6aa75cbfd35e769d2465074aa6b755d8bc68402a34c68e7ed`。
+
+控制机证据目录：`whobot-mcp-app/auto/artifacts/releases/2026-11-05-whobot-2.0.5/`，入口 `publication-results.json`，含最终 ZIP、递归预检、安全扫描、网页回执和逐文件对比。MacAir 下载目录：`~/Downloads/whobot-release-2.0.5-20261105/`，保留 ClawHub 双发布回执与官方报告。审核中不等于已上线；百度候选测试用例未在平台沙箱运行，本次未执行真实电话或收费操作。

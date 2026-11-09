@@ -220,3 +220,30 @@ SkillHub 登录团队为 `org-teo38e1k`（北京呼波特人工智能科技有�
 千问企业版复查为运行测评失败，内容合规与 Skill 包安全均通过。实际要求补录新版行业查询、语音/电话体验、创建或调优、线索外呼及线索包、账号登录与余额、产品介绍与选型六类完整过程。已请求新版材料位置或测试资源与费用上限；没有擅自执行收费业务。WorkBuddy 2.0.6 复查仍审核中。
 
 新增回执位于原证据目录的 `macair-evidence/skillhub-corporate-*`、`qwen-corporate-latest.txt`、`qwen-corporate-rejection.txt`、`workbuddy-latest.txt`；入口总表和报告已更新。后续先查 2.0.6 当前状态，审核完成后继续同一原条目，勿重提或创建替代版本。
+
+
+## 2.0.7 渠道同步记录（2026-11-09）
+
+用户提供的两个仓库已更新到 2.0.7。本轮按现有原条目同步外部分发渠道，协议保持 2。合集源提交 `fffcacbb99e8ad1f79532595acbb7fc0299529ed`，专用仓库源提交 `230f61b2e7da71fb09f9126b9a1f81d4d95a79ef`；11 个 Skill 文件及 `.skill` 安装包已逐字节核对一致。7 个渠道适配 ZIP 递归本地预检全部 PASS。
+
+| 渠道 | 核验结果 |
+|---|---|
+| [Agensi](https://www.agensi.io/skills/whobot-ai-phone-agents) | 原条目 2.0.7 更新已上线，平台 revision 1.1，公开更新日志和 12 文件结构可见，显示安全扫描通过；编辑页回读为 2.0.7 ZIP。 |
+| [ClawHub 个人](https://clawhub.ai/whobot-ai/whobot-phonecall-skill) | latest 2.0.7；versionId `k974t931pxpeqr7e5pt814xtmn8hwp4r`，11 源文件哈希一致。版本级 security suspicious / hasWarnings，Skillspector MEDIUM 32、ClawScan suspicious。 |
+| [ClawHub 组织](https://clawhub.ai/whobot/whobot-phonecall-skill) | latest 2.0.7；versionId `k975szjyc7783sns6rtv5hb1q18hwpfs`，11 源文件哈希一致。版本级 security clean / hasWarnings，Skillspector MEDIUM 23、ClawScan clean。 |
+| [ModelScope](https://modelscope.cn/skills/WhoBot/whobot-phonecall-skill) | 手动同步成功，公开 ZIP 的 11 文件与源码一致；自动同步继续开启。 |
+| [GitCode v2.0.7](https://gitcode.com/whobot/openclaw-whobot-skill/releases/v2.0.7) | 原仓库提交 `caaf8eaa2bab7da019ff439b6b74a0c000ad212d`，保留历史及独立 MCP。发行版已发布，重新下载附件与上游包一致。 |
+| [skills.sh](https://skills.sh/whobot-ai/skills/whobot-phonecall-skill) | 单次隔离安装 2.0.7 成功，11 文件一致；公开页面仍显示 2.0.6，未声称索引已刷新。扫描：Gen safe、Socket 0 alerts、Snyk medium。 |
+| [SkillHub.club](https://skillhub.club/skills/langgpt-whobot-phonecall-skill) | 原条目 revision 3，完整 12 文件回读一致，2.0.7 发布请求已受理，安全审核 queued；公开 pending_eval，尚未确认上线。 |
+| WorkBuddy | 原 2.0.6 审核中，仅可撤回；未撤回。2.0.7 候选包已准备，未提交。 |
+| SkillHub 企业版 | 2.0.7 上传解析 12 文件后提交，被“已有版本审核中”拒绝；原 2.0.6 仍安全审核中，公开 2.0.5。未跳过安全审核或创建替代条目。 |
+| 千问企业版 | 原 2.0.6 因需要本次版本完整实测视频而运行测评失败；安全/内容检查通过。2.0.7 包已准备，未复用历史视频重提，未执行付费业务。 |
+| 豆包 | 原 2.0.5 驳回：11.6 暂停三方纯 Skill，要求 MCP + Plugin。2.0.7 候选包准备完成，未扩展为插件改造。 |
+| 百度 DuMate | 原平台 1.0.0 / 源 2.0.4 仍审核中、更新禁用；2.0.7 包已准备，未撤回。 |
+| 其他目录 | SkillHaven 原仓库申请仍 In review；SkillsDirectory 原条目索引为 2.0.6；SkillsLLM 原仓库申请不重复提交；Skillry 2.0.7 单次提交 Failed to fetch、个人页仍 0 Skills；agentskill.sh 导航超时。 |
+
+两份 ClawHub 官方报告 ZIP 和 manifest 已保存，均为 2.0.7 / 11 文件 / sourceKind published / status succeeded。报告声明部分扫描覆盖受限；主要提示可变 CLI 版本和业务资料/录音的隐私说明。平台 verdict 与本地预检分开记录。
+
+安装包 / GitCode 附件 SHA-256：`99cbf8daa799c909cbe671eff2847078caf64aad6aa2b0b12f63d68d18eb0425`。
+
+控制机证据：`whobot-mcp-app/auto/artifacts/releases/2026-11-09-whobot-2.0.7/`，入口 `README.md` / `publication-results.json`；MacAir `/Users/jiangshu/whobot-release-2.0.7-20261109/`。本轮无真实拨号、员工创建、客户名单上传或收费业务，百度测试用例未在平台沙箱运行。未创建后台监控任务；待审核渠道后续继续原条目、原版本。

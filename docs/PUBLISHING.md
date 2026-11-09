@@ -69,7 +69,7 @@ ClawHub 发布使用纯文本 skill 目录，不上传旧 MCP 文件、ZIP、`.D
 
 2026-10-27 历史版本来源：`~/Downloads/whobot-phonecall-skill-261027.zip`。
 对应代码提交：合集 `1d1fb15`，专用仓库 `32878cd`；当时文件内版本为 2.0.0，CLI 协议为 2。
-当前内容基线为合集 `eb637304d5fecdfd86c4b520a59a2041eea0d51f` 中的电话 skill：文件内版本 2.0.6、CLI 协议 2、11 个纯文本文件（`company.md` 已合并进 `product.md`）；2.0.6 已同步到专用仓库（`06bb7b5`，含安装包与文档），尚未同步到各发布渠道；最近一次渠道同步状态见下方 2.0.5 记录。
+当前内容基线为合集 `eb637304d5fecdfd86c4b520a59a2041eea0d51f` 中的电话 skill：文件内版本 2.0.6、CLI 协议 2、11 个纯文本文件（`company.md` 已合并进 `product.md`）；2.0.6 已同步到专用仓库（`06bb7b5`，含安装包与文档），本轮渠道同步状态见下方 2.0.6 记录，部分渠道审核中或等待登录/平台开放更新。
 
 ## ClawHub 发布记录：2026-10-27
 
@@ -188,3 +188,27 @@ ClawHub 使用 `whobot-ai` 身份双 dry-run 后分别发布；两份内容指�
 WorkBuddy/SkillHub 适配 ZIP：`c95ae28e58a5a1b849515269ebd2ae8064645cf01e7d179af930da7c978f650f`；千问：`8d0efcc423e74cfd9eb78440480337c21f4ab2d673c85de8c8bf5c5acf42e230`；豆包：`67244d3077848af26e2b8723a879746175528d685de6c2139c5c939ceef71c2d`；百度候选：`42f3c1ca7c4071a6aa75cbfd35e769d2465074aa6b755d8bc68402a34c68e7ed`。
 
 控制机证据目录：`whobot-mcp-app/auto/artifacts/releases/2026-11-05-whobot-2.0.5/`，入口 `publication-results.json`，含最终 ZIP、递归预检、安全扫描、网页回执和逐文件对比。MacAir 下载目录：`~/Downloads/whobot-release-2.0.5-20261105/`，保留 ClawHub 双发布回执与官方报告。审核中不等于已上线；百度候选测试用例未在平台沙箱运行，本次未执行真实电话或收费操作。
+
+## 2.0.6 渠道同步记录（2026-11-08，回执 UTC 2026-11-09）
+
+源基线为合集 `928acc6ff8edf0a1ef13090a81b951150fa18a54`（Skill 变更 `eb637304d5fecdfd86c4b520a59a2041eea0d51f`）及专用仓库 `06bb7b54462eedc87d26b811f7638972cc4e61f8`。11 个纯 Skill 文件和 `.skill` 内容一致，协议 2；`company.md` 合并到 `product.md`。本轮在 MacAir 沿用原条目同步。
+
+| 渠道 | 已验证状态 |
+| --- | --- |
+| ClawHub 个人 / 组织 | 两个原条目 latest 均 2.0.6，顶层 moderation clean。个人 versionId `k973909ebbggvwsb7j9f81gbgh8hxxsf`；组织 `k9787qe30nqj565zy4q8c6h5fh8hxhws`。11 个源文件哈希均一致；个人公开版本另有 `skill-card.md`。 |
+| skills.sh | 隔离目录真实安装成功，11 文件逐字节一致；原页面已显示 2.0.6。 |
+| ModelScope | 手动同步成功，公开 ZIP 11 文件逐字节一致，自动同步继续开启。 |
+| GitCode | 原仓库提交 `db5edb5c2a7ed6b9e19f3d7f2b25608fe265177a`，保留历史和独立 MCP；[v2.0.6 发行版](https://gitcode.com/whobot/openclaw-whobot-skill/releases/v2.0.6) 已发布，重新下载附件与源 `.skill` 一致。 |
+| WorkBuddy | 原资产 `os_09a8d4e2459431ea` 提交 2.0.6，审核中。最终 r1 ZIP 递归本地预检 PASS；初版描述超限仅解析失败，未提交。 |
+| 千问企业版 | 北京呼波特人工智能科技有限公司原申请提交 2.0.6，进入运行测评。明确披露历史 2.0.4 查询截图/录像，不声称新版完整业务实测。 |
+| 千问个人版 | 用户明确“不上传个人版，走企业版”；个人旧申请未修改、未重提。 |
+| SkillHub | 原登录失效，2.0.6 尚未提交。用户要求尝试 GitHub 授权，但当前个人入口仅微信/手机，团队入口为腾讯统一身份（手机/邮箱/SSO）。等待原发布账号登录，企业公开页仍 2.0.5。 |
+| 豆包 | 原申请退回说明为“11.6 暂缓三方纯skill上架，请改造成mcp，组合成plugin以插件形式上架”。2.0.6 候选包已准备，未重复提交或扩建插件。 |
+| 百度 DuMate | 原平台 1.0.0 / 源 2.0.4 仍审核中、更新禁用；2.0.6 候选包已准备，未撤回原申请。 |
+
+ClawHub 官方报告已保存：个人版本 security clean / hasWarnings，Skillspector LOW 18；组织版本 security suspicious，Skillspector MEDIUM 26、ClawScan suspicious。主要提示可变版本 CLI 安装和录音本地保存缺少隐私提醒，并声明部分扫描覆盖受限。顶层 moderation clean 不代表版本级扫描没有警告。上传指纹均为 `8fc2d0ede44df4b176988d39133fda28da412e92dd67e0b9ccd99cb8f8b92cc5`。组织额外发布请求被“Version 2.0.6 already exists”拒绝后查询原成功版本，未创建替代版本。
+
+`.skill` / GitCode 附件 SHA-256：`43c7439eaba15be518f695cda46799c238233bfc69d1977bb49ed7f16ddad50d`。
+WorkBuddy 最终 r1：`5b58b0a93967d22a9d310ba9cd03bc2b4aed14f19a943fe121a1407e165e2a4c`；千问：`9f7224e46bca91a272fe536f326d66cfebd1fd347b8abb4e3cc9733ed8c627b3`；豆包候选：`654190d30fccb4a4b1e080a674274fbfeccd814338f14182f8a53c6145afb162`；百度候选：`4c4aff494ec96c4d2993104e9ccc30b09df4e85daa440b9181eb89e057a0085d`。
+
+控制机证据：`whobot-mcp-app/auto/artifacts/releases/2026-11-08-whobot-2.0.6/`，入口 `README.md` / `publication-results.json`；MacAir `/Users/jiangshu/whobot-release-2.0.6-20261108`。平台审核与本地预检分开记录；本轮没有真实拨号、创建/调整员工、上传客户名单或收费业务。百度候选测试用例未在平台沙箱运行。Ego Lite TaskSpace 84 交给用户完成 SkillHub 登录，确认后在同一空间继续。

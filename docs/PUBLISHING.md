@@ -200,9 +200,9 @@ WorkBuddy/SkillHub 适配 ZIP：`c95ae28e58a5a1b849515269ebd2ae8064645cf01e7d179
 | ModelScope | 手动同步成功，公开 ZIP 11 文件逐字节一致，自动同步继续开启。 |
 | GitCode | 原仓库提交 `db5edb5c2a7ed6b9e19f3d7f2b25608fe265177a`，保留历史和独立 MCP；[v2.0.6 发行版](https://gitcode.com/whobot/openclaw-whobot-skill/releases/v2.0.6) 已发布，重新下载附件与源 `.skill` 一致。 |
 | WorkBuddy | 原资产 `os_09a8d4e2459431ea` 提交 2.0.6，审核中。最终 r1 ZIP 递归本地预检 PASS；初版描述超限仅解析失败，未提交。 |
-| 千问企业版 | 北京呼波特人工智能科技有限公司原申请提交 2.0.6，进入运行测评。明确披露历史 2.0.4 查询截图/录像，不声称新版完整业务实测。 |
+| 千问企业版 | 2.0.6 安全检查通过，运行测评已退回；平台要求新版六类完整业务录屏，历史 2.0.4 材料不足。等待新版材料，或指定测试账号、员工、号码名单和费用上限后补录，未重复提交。 |
 | 千问个人版 | 用户明确“不上传个人版，走企业版”；个人旧申请未修改、未重提。 |
-| SkillHub | 原登录失效，2.0.6 尚未提交。用户要求尝试 GitHub 授权，但当前个人入口仅微信/手机，团队入口为腾讯统一身份（手机/邮箱/SSO）。等待原发布账号登录，企业公开页仍 2.0.5。 |
+| SkillHub 企业版 | 用户完成企业账号授权后，原条目 `org-teo38e1k/whobot-phonecall-skill` 单次提交 2.0.6，安全审核中，公开版仍 2.0.5；之后需团队管理员审核并核对对外发布。个人条目本轮未更新。 |
 | 豆包 | 原申请退回说明为“11.6 暂缓三方纯skill上架，请改造成mcp，组合成plugin以插件形式上架”。2.0.6 候选包已准备，未重复提交或扩建插件。 |
 | 百度 DuMate | 原平台 1.0.0 / 源 2.0.4 仍审核中、更新禁用；2.0.6 候选包已准备，未撤回原申请。 |
 
@@ -211,4 +211,12 @@ ClawHub 官方报告已保存：个人版本 security clean / hasWarnings，Skil
 `.skill` / GitCode 附件 SHA-256：`43c7439eaba15be518f695cda46799c238233bfc69d1977bb49ed7f16ddad50d`。
 WorkBuddy 最终 r1：`5b58b0a93967d22a9d310ba9cd03bc2b4aed14f19a943fe121a1407e165e2a4c`；千问：`9f7224e46bca91a272fe536f326d66cfebd1fd347b8abb4e3cc9733ed8c627b3`；豆包候选：`654190d30fccb4a4b1e080a674274fbfeccd814338f14182f8a53c6145afb162`；百度候选：`4c4aff494ec96c4d2993104e9ccc30b09df4e85daa440b9181eb89e057a0085d`。
 
-控制机证据：`whobot-mcp-app/auto/artifacts/releases/2026-11-08-whobot-2.0.6/`，入口 `README.md` / `publication-results.json`；MacAir `/Users/jiangshu/whobot-release-2.0.6-20261108`。平台审核与本地预检分开记录；本轮没有真实拨号、创建/调整员工、上传客户名单或收费业务。百度候选测试用例未在平台沙箱运行。Ego Lite TaskSpace 84 交给用户完成 SkillHub 登录，确认后在同一空间继续。
+控制机证据：`whobot-mcp-app/auto/artifacts/releases/2026-11-08-whobot-2.0.6/`，入口 `README.md` / `publication-results.json`；MacAir `/Users/jiangshu/whobot-release-2.0.6-20261108`。平台审核与本地预检分开记录；本轮没有真实拨号、创建/调整员工、上传客户名单或收费业务。百度候选测试用例未在平台沙箱运行。用户已完成 SkillHub 企业授权，沿用 Ego Lite TaskSpace 84 续传。
+
+### 企业授权后续传（UTC 2026-11-09 07:50）
+
+SkillHub 登录团队为 `org-teo38e1k`（北京呼波特人工智能科技有限公司），原条目可在「管理后台 → 技能列表 → 更多 → 更新」维护。提交前核对 12 个文件、原 slug、显示名、图标、分类及新版完整描述；仅提交一次。最终 ZIP `whobot-phonecall-skill-2.0.6-skillhub-corporate.zip`，SHA-256 `e9a01a75f67b9691d7a61c1067820fd40fd40b64908cfad337f9f251ddfa0d6c`，递归预检 PASS。平台回执“v2.0.6 已提交审核”，审核页为安全审核中；不把提交回执当作上线。按官方企业流程，自动安全审核之后还有团队管理员审核；不以管理员通过按钮跳过正在进行的安全审核。
+
+千问企业版复查为运行测评失败，内容合规与 Skill 包安全均通过。实际要求补录新版行业查询、语音/电话体验、创建或调优、线索外呼及线索包、账号登录与余额、产品介绍与选型六类完整过程。已请求新版材料位置或测试资源与费用上限；没有擅自执行收费业务。WorkBuddy 2.0.6 复查仍审核中。
+
+新增回执位于原证据目录的 `macair-evidence/skillhub-corporate-*`、`qwen-corporate-latest.txt`、`qwen-corporate-rejection.txt`、`workbuddy-latest.txt`；入口总表和报告已更新。后续先查 2.0.6 当前状态，审核完成后继续同一原条目，勿重提或创建替代版本。

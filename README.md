@@ -33,7 +33,7 @@ Cursor、Cline 等 Agent 工具。部分 skill 会调用官方 CLI，运行要�
 请帮我安装呼波特的电话 Skill https://github.com/whobot-com/openclaw-whobot-skill
 ```
 
-电话 Skill 完整文档（各平台接入、使用指南）：<https://whobot-com.github.io/openclaw-whobot-skill/>
+电话 Skill 完整文档（各平台接入、使用指南）：<https://www.whobot.com/skills/docs/>
 
 **通用（推荐）：**
 

@@ -9,13 +9,13 @@ Cursor、Cline 等 Agent 工具。部分 skill 会调用官方 CLI，运行要�
 | Skill | 说明 | 安装 |
 |---|---|---|
 | [clean-commits](skills/clean-commits) | 生成干净、跟随仓库既有风格的 commit message，零 AI 水印 | `npx skills add whobot-ai/skills@clean-commits -g -y` |
-| [whobot-phonecall-skill](skills/whobot-phonecall-skill) | 呼波特 AI 电话数字员工：选型找标杆、体验通话、个人助理代拨、创建与调优员工、员工状态管理、上传线索外呼 | `npx skills add whobot-ai/skills@whobot-phonecall-skill -g -y` |
+| [whobot-phonecall-skill](skills/whobot-phonecall-skill) | 呼波特 AI 电话数字员工：选型找标杆、标杆介绍、体验通话、个人助理代拨、创建与调优员工、员工状态管理、上传线索外呼 | `npx skills add whobot-ai/skills@whobot-phonecall-skill -g -y` |
 
 ### 呼波特 AI 电话数字员工
 
 用自然语言帮企业挑选、体验、创建和调优会打电话的 AI 数字员工，适用于回访、邀约、通知、线索筛选、电话销售、热线接听等场景。
 
-- 找标杆：按行业和电话目标推荐合适的数字员工。
+- 找标杆：按行业和电话目标推荐合适的数字员工；选中后先介绍它的简介、介绍视频、案例录音和对话，不需要登录。
 - 体验：网页语音对话或真实来电通话；电话结束后展示摘要、完整文字对话和录音。呼入（接听类）标杆可直接拨打公开体验号码体验。
 - 个人助理：替你给餐厅、门店打电话办事（如订位），确认后直接拨出。
 - 创建与调优：支持多种方式创建、优化自己的数字员工。
